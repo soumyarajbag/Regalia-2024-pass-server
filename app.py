@@ -30,6 +30,10 @@ def makeQR(data):
     qr.png('qr_code.png', scale=10, module_color='#151515', background='#ffc82f')
     return qr.get_png_size(12)
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the Regalia 2024 Pass Generator"}), 200
+
 @app.route('/generate-pass', methods=['POST'])
 def generate_pass():
     try:
