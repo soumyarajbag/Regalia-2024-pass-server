@@ -205,5 +205,3 @@ def generate_png():
     except Exception as e:
         return jsonify({"message": "Failed to generate PNG or upload to Imgur", "error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True)
